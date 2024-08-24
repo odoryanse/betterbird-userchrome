@@ -1,0 +1,14 @@
+@import "./css/config.css"; 
+
+@import "./css/theme.betterbird_flatten.css";
+@import "./css/theme.betterbird_flatten--background-image.css";
+
+@import "./css/toolbars.oneline.css";
+@import "./css/toolbars.flexible_space--disable.css";
+@import "./css/toolbars.windows_controls--custom_styles.css";
+
+@import "./css/menu.menuitem_icon--disable.css";
+
+@import "./css/scrollbar.thin.css";
+
+

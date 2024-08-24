@@ -1,0 +1,97 @@
+/* Oneline grid layout */
+#titlebar {
+  display: grid;
+  grid-template-columns: auto 1fr max-content;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "menu menu  control" 
+    "tabs tools tools-span";
+  justify-items: stretch;
+}
+
+#toolbar-menubar {
+  grid-area: menu;
+}
+
+#toolbar-menubar + unified-toolbar {
+  grid-area: tools;
+}
+
+#unifiedToolbarContainer {
+  width: 100% !important;
+}
+
+#unifiedToolbarContent {    
+  justify-content: end !important;
+}
+
+.search-bar {
+  width: max(15vw, var(--uc-search-box-min-width)) !important;
+}
+
+#tabs-toolbar {
+  grid-area: tabs;
+}
+
+#tabmail-tabs {
+  width: calc(100% - var(--tab-min-height)) !important;
+}
+
+#tabmail-arrowscrollbox {
+  width: 100vw;
+}
+
+.titlebar-buttonbox-container {
+  position: absolute;
+  right: 0;
+}
+
+#unifiedToolbarContainer > .titlebar-buttonbox-container {
+  display: none !important;
+}
+
+.titlebar-buttonbox-container {
+  height: var(--tab-min-height) !important;
+}
+
+/* Remove the empty space when the Menu Bar is open */
+#titlebar:after {
+  content: "";
+  display: block;
+  background: transparent;
+  width: 100%;
+  min-width: var(--uc-windows-controls-width);
+  grid-area: control;
+}
+#toolbar-menubar {
+  height: var(--tab-min-height);
+}
+#toolbar-menubar:not([inactive="true"]) {
+  grid-area: 1 / 1 / 2 / -1;
+  border-bottom: 1px solid var(--uc-separator-color);
+}
+#toolbar-menubar:not([inactive="true"]) + unified-toolbar {
+  grid-area: tools-span;
+}
+
+/* Remove toolbar border*/
+#toolbar-menubar + unified-toolbar {
+  border-bottom: none !important;
+}
+
+/* Move the Spaces button to the start */ 
+#spacesToolbar[hidden] ~ #navigation-toolbox-background #titlebar {
+  grid-template-columns: var(--tab-min-height) auto 1fr max-content;
+  grid-template-areas:
+    "menu      menu menu  control" 
+    "space-btn tabs tools tools-span";
+}
+#spacesPinnedButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#toolbar-menubar:not([inactive="true"]) + unified-toolbar #spacesPinnedButton{
+  top: var(--tab-min-height);
+}

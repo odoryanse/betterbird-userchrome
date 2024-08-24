@@ -1,0 +1,289 @@
+/* Color */
+#messengerWindow:not([lwtheme="true"]) {
+  color: var(--uc-secondary-text-color) !important;
+}
+#messengerWindow:not([lwtheme="true"]) [selected="true"] {
+  color: var(--uc-primary-text-color) !important;
+}
+
+/* Toolbox */
+#navigation-toolbox-background {
+  border-bottom: solid 1px var(--uc-separator-color);
+}
+
+#messengerWindow:not([lwtheme="true"]) #navigation-toolbox {
+  background-color: var(--uc-background-image-color) !important;
+}
+
+/* Tabs bar */
+#tabs-toolbar {
+  padding: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+#scrollbutton-up:not([disabled="true"]),
+#scrollbutton-down:not([disabled="true"]) {
+  background: var(--uc-hover-background-color);
+}
+
+spacer[part="overflow-start-indicator"],
+spacer[part="overflow-end-indicator"] {
+  display: none !important;
+}
+
+#tabmail-arrowscrollbox {
+  height: 100% !important;
+}
+
+.tab-background[selected="true"] {
+  background: var(--uc-select-background-color) !important;
+}
+
+.tabmail-tab:hover .tab-background:not([selected="true"]) {
+  background: var(--uc-hover-background-color) !important;
+}
+
+.tabmail-tab {
+  box-shadow:  none !important;
+  border-radius: 0 !important;
+  margin-inline-end: 0 !important;
+}
+
+.tab-text.tab-label {    
+  text-shadow: none !important;
+}
+
+.tab-line {
+  display: none !important;
+}
+
+.tab-close-button {
+  border-radius: 0 !important;
+  display: none !important;
+}
+
+.tabmail-tab:not(:first-child):hover .tab-close-button {
+  display: inline grid !important;
+}
+
+#tabs-toolbar > #alltabs-button {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: unset !important;
+  border: none !important;
+  background: transparent !important;
+  transition: none !important;
+  box-shadow: none !important;
+}
+#tabs-toolbar > #alltabs-button:hover {
+  background: var(--uc-hover-background-color) !important;
+}
+#tabs-toolbar > #alltabs-button[open="true"] {
+  background: var(--uc-select-background-color) !important;
+}
+#tabs-toolbar > #alltabs-button > .toolbarbutton-icon {
+  padding: 0 !important;
+}
+
+.tabmail-tab:not(:first-child) {
+  position: relative;
+  padding-left: 1px !important;
+}
+.tabmail-tab:not(:first-child):before {
+  content: '';
+  height: 60%;
+  width: 1px;
+  background: var(--uc-separator-color);
+  position: absolute;
+  left: 0;
+  top: calc((100% - 60%) / 2);
+  z-index: 10;
+  transition: none !important;
+}
+
+.tabmail-tab[selected="true"]:not(:first-child):before,
+.tabmail-tab[selected="true"] + .tabmail-tab:before,
+.tabmail-tab:hover:not(:first-child):before,
+.tabmail-tab:hover + .tabmail-tab:before{
+  height: 100%;
+  top: 0;
+}
+
+.tabmail-tab[selected="true"]:not(:first-child):before,
+.tabmail-tab[selected="true"] + .tabmail-tab:before {
+  background: var(--uc-selected-background-color);
+}
+
+.tabmail-tab:hover:not(:first-child, [selected="true"]):before,
+.tabmail-tab:hover:not([selected="true"]) + .tabmail-tab:before {
+  background: var(--uc-hover-background-color);
+}
+
+/* Toolbar */
+unified-toolbar {
+  border-bottom: 1px solid var(--uc-separator-color) !important;
+    --button-border-radius: 0 !important;
+    --button-margin: 0 !important;
+    --button-border-size: 0 !important;
+}
+
+#unifiedToolbarContainer,
+#unifiedToolbar,
+#unifiedToolbarContent,
+.live-content,
+.unified-toolbar-button {
+  height: 100% !important;
+}
+
+#unifiedToolbar,
+#unifiedToolbarContent {
+  align-items: stretch !important;
+}
+
+#unifiedToolbarContent {
+  padding: 0 !important;
+  padding-block: 0 !important;
+}
+
+#button-appmenu {
+  margin: 0 !important;
+}
+
+#spacesPinnedButton {
+  padding: calc((var(--tab-min-height) - 16px) / 2) !important;
+  margin: 0 !important;
+}
+
+.unified-toolbar-button {
+  padding: calc((var(--tab-min-height) - 16px) / 2) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+global-search-bar {
+  height: var(--tab-min-height) !important;
+}
+
+input[aria-label="Search:"],
+input[aria-label="Search:"] + div,
+input[aria-label="Search:"] + div + button {
+  height: var(--tab-min-height) !important;
+}
+
+input[aria-label="Search:"] {
+  --padding-block: 10px;
+  border: none !important;
+  outline: none !important;    
+  color: color-mix(in srgb, transparent 50%, var(--lwt-text-color)) !important;
+  background: var(--uc-hover-background-color) !important;
+}
+
+input[aria-label="Search:"]:focus {
+  background: var(--uc-select-background-color) !important;
+}
+
+input[aria-label="Search:"] + div {
+  inset-inline-start: 10px !important;
+}
+
+span[data-l10n-id="search-bar-placeholder-with-key2"] {
+  color: color-mix(in srgb, transparent 50%, var(--lwt-text-color)) !important;
+}
+
+kbd {
+  --layout-background-3: var(--uc-hover-background-color);
+  --layout-color-2: color-mix(in srgb, transparent 60%, var(--lwt-text-color));
+  box-shadow: unset !important;
+  border-radius: unset !important;
+}
+
+input[aria-label="Search:"] + div + button {
+  padding: calc((var(--tab-min-height) - 16px) / 2) !important;    
+}
+
+input[aria-label="Search:"] + div + button:hover {
+  background: var(--uc-hover-background-color) !important;
+}
+
+.search-button-icon {
+  color: var(--lwt-text-color);
+}
+
+/* panel, menupopup, panelmultiview */
+:is(panel, menupopup, popupset, panelmultiview) {
+  --panel-separator-color: var(--uc-separator-color) !important;
+  --panel-separator-margin: 4px 0 !important;
+  --panel-background: var(--uc-background-image-color) !important;
+  --layout-background-1: var(--uc-background-image-color) !important;  
+  --arrowpanel-background: var(--uc-background-image-color) !important;
+	--panel-shadow: none !important;
+  --panel-border-radius: 0 !important;
+  --panel-border-color: var(--uc-secondary-text-color) !important;
+  --layout-border-1: var(--uc-separator-color) !important;
+  --appmenu-icons-fill: var(--uc-hover-background-color) !important;
+  --appmenu-icons-stroke: var(--uc-primary-text-color) !important;
+  --button-background-color: var(--uc-hover-background-color) !important;
+  --button-color: var(--uc-primary-text-color) !important;
+  color: var(--uc-secondary-text-color) !important;
+}
+
+menupopup > :is(menu, menuitem) {
+	--menu-item-margin: 0 !important;
+	padding: calc((var(--tab-min-height) - 18px - 1px) / 2) 12px !important;
+}
+
+menuitem:is([type="checkbox"], [checked="true"], [type="radio"]) > .menu-iconic-left > .menu-iconic-icon {
+  display: flex !important;
+}
+menuitem:is([type="checkbox"], [checked="true"], [type="radio"]) > .menu-iconic-left {
+  margin-inline-end: 8px; 
+}
+
+menupopup > :is(menu, menuitem) {
+  border-radius: 0 !important;
+}
+
+panelview > vbox > toolbarbutton {
+	--appmenu-button-margin: 0 !important;
+	--arrowpanel-menuitem-border-radius: 0 !important;
+	padding-inline: 0 !important;
+	padding: calc((var(--tab-min-height) - 16px - 1px) / 2) 12px !important;
+}
+
+panelview > vbox > toolbarbutton, 
+menupopup > :is(menu, menuitem) {
+  fill: var(--uc-secondary-text-color) !important;
+  color: var(--uc-secondary-text-color) !important;
+}
+
+panelview > .panel-header {
+  padding: 4px 12px 4px calc(12px - ((var(--tab-min-height) - 16px - 1px) / 2)) !important;
+}
+
+panelview > .panel-header > h1 {
+  margin-right: calc(12px + (var(--tab-min-height) - 16px - 1px) / 2) !important;
+}
+
+panelview > box > toolbarbutton {
+	--arrowpanel-menuitem-border-radius: 0 !important;
+	margin: 0 !important;
+  padding: calc((var(--tab-min-height) - 16px - 1px) / 2) !important;
+}
+
+menuseparator  {
+  margin: var(--panel-separator-margin) !important;
+}
+
+/* Spaces Sidebar */
+#messengerWindow:not([lwtheme="true"]) {
+  --spaces-gap: 0px !important;
+  --spaces-container-gap: 0 !important;
+  --spaces-border-color: var(--uc-separator-color) !important;
+  --spaces-bg-color: var(--uc-background-image-color) !important;
+  --spaces-bg-image: none !important;
+  --spaces-icon-size: 16px !important;
+	--spaces-padding: 0px !important;
+  --spaces-button-padding: calc((var(--tab-min-height) - var(--spaces-icon-size)) / 2) !important;
+  --button-border-radius: 0 !important;
+}

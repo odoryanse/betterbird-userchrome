@@ -1,0 +1,4 @@
+/* Disable Flexible Space */
+#toolbar-menubar + unified-toolbar .spacer {
+    display: none !important;
+}

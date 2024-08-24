@@ -1,0 +1,31 @@
+/* Color */
+:root {
+  --uc-theme-color: #0A9CDB;
+  --uc-hover-background-color: color-mix(in srgb, transparent 92%, var(--lwt-text-color));    
+  --uc-select-background-color: color-mix(in srgb, transparent 86%, var(--lwt-text-color));
+  --uc-primary-text-color: color-mix(in srgb, transparent 0%, var(--lwt-text-color));
+  --uc-secondary-text-color: color-mix(in srgb, transparent 20%, var(--lwt-text-color));
+  --uc-separator-color: color-mix(in srgb, transparent 60%, var(--lwt-text-color));
+}
+
+/* Background */
+:root {  
+  --uc-background-image: url("./../image/ff-1.png");
+  --uc-background-image-position: top right;
+  --uc-background-image-color: #fafafa;
+}
+
+/* Toolbar size */
+:root {
+  --uc-windows-controls-width: 138px;
+  --uc-search-box-min-width: 250px;
+  --uc-tab-min-height: 30px;
+}
+
+/* Overide variable */
+:root {
+  --tab-min-height: var(--uc-tab-min-height) !important;
+}
+html:not([lwtheme="true"]) {  
+  --lwt-text-color: var(--uc-theme-color) !important;
+}

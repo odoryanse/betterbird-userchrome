@@ -1,0 +1,13 @@
+menupopup > :is(menu, menuitem) .menu-iconic-left:not([checked="true"]) {
+  display: none !important;
+}
+
+menupopup > :is(menu, menuitem) .menu-iconic-left[checked="true"] {
+  position: absolute;
+  right: calc(12px - 8px - 2px);
+}
+
+menupopup > :is(menu, menuitem)[checked="true"] {
+  position: relative;
+  padding-right: calc(12px + 16px + 12px ) !important;
+}

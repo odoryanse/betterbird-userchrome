@@ -1,0 +1,11 @@
+#messengerWindow:not([lwtheme="true"]) #navigation-toolbox {
+    background: no-repeat var(--uc-background-image-position) var(--uc-background-image) !important;
+}
+
+#messengerWindow:not([lwtheme="true"]) #titlebar,
+#messengerWindow:not([lwtheme="true"]) #toolbar-menubar,
+#messengerWindow:not([lwtheme="true"]) #toolbar-menubar + unified-toolbar,
+#messengerWindow:not([lwtheme="true"]) #tabs-toolbar {
+    background: transparent !important;
+    background-image: none !important;
+}
