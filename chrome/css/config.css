@@ -12,7 +12,7 @@
 :root {  
   --uc-background-image: url("./../image/ff-1.png");
   --uc-background-image-position: top right;
-  --uc-background-image-color: #fafafa;
+  --uc-background-image-color: #fdfdfd;
 }
 
 /* Toolbar size */
